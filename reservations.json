@@ -1,0 +1,19 @@
+[
+  {
+    "id": "e58bdf00-2f3e-4ed1-a9c2-088d35e61041",
+    "createdAt": "2026-11-26T06:16:45.935Z",
+    "status": "confirmed",
+    "date": "2026-12-19",
+    "time": "12:34",
+    "location": "residence",
+    "venue": "",
+    "dishes": [
+      "Poulet braisé"
+    ],
+    "dessert": "",
+    "note": "",
+    "giftType": "Téléphone ou technologie",
+    "giftDetails": "bleu",
+    "updatedAt": "2026-11-26T06:17:11.455Z"
+  }
+]

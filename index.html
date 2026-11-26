@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f7f4ee">
+    <meta name="description" content="Une petite invitation à choisir notre prochain dîner à deux.">
+    <title>Un dîner à deux</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar">
+        <a class="wordmark" href="#home" aria-label="Un dîner à deux, accueil">
+          <span class="wordmark-icon" aria-hidden="true">♡</span>
+          <span>à deux<span class="wordmark-period">.</span></span>
+        </a>
+        <button class="host-link" id="hostToggle" type="button">
+          <span class="host-dot" aria-hidden="true"></span>
+          <span id="hostToggleLabel">Espace de l’hôte</span>
+        </button>
+      </header>
+
+      <main>
+        <section class="booking-view" id="bookingView">
+          <div class="hero">
+            <div class="hero-copy">
+              <div class="eyebrow"><span class="sparkle">✳</span> UNE INVITATION POUR NOUS DEUX</div>
+              <h1>Un dîner,<br><em>à ton heure.</em></h1>
+              <p class="hero-subtitle">Acho, choisis le moment, le menu et l’endroit qui te fera plaisir. Je m’occupe du reste.</p>
+              <div class="hero-signoff"><span class="signoff-line"></span> rien que nous deux <span class="signoff-heart">♡</span></div>
+            </div>
+            <div class="hero-art" aria-label="Illustration d'un dîner aux chandelles" role="img">
+              <div class="art-circle"></div>
+              <div class="art-caption"><span class="caption-star">✳</span> une belle<br>soirée nous attend</div>
+              <div class="plate plate-back"></div>
+              <div class="plate plate-front"><span class="plate-center"></span></div>
+              <div class="plate-petal petal-one"></div><div class="plate-petal petal-two"></div>
+              <div class="plate-petal petal-three"></div><div class="plate-petal petal-four"></div>
+              <div class="fork"><i></i><i></i><i></i><i></i><b></b></div>
+              <div class="candle"><span class="flame"></span><span class="candle-stick"></span><span class="candle-base"></span></div>
+              <div class="wine-glass"><span class="glass-bowl"></span><span class="glass-stem"></span><span class="glass-foot"></span></div>
+              <div class="art-doodle">bon<br>appétit</div>
+            </div>
+          </div>
+
+          <form id="bookingForm" class="booking-form">
+            <div class="form-heading">
+              <div>
+                <div class="eyebrow muted-eyebrow">TA SOIRÉE, TES ENVIES</div>
+                <h2>On se retrouve quand ?</h2>
+              </div>
+              <div class="step-label"><span>01</span> / 04</div>
+            </div>
+
+            <section class="form-section">
+              <div class="section-title"><span class="section-number">01</span><div><h3>Choisis le moment</h3><p>Le jour et l’heure qui te conviennent.</p></div></div>
+              <div class="date-time-grid">
+                <label class="field"><span class="field-label">Le jour</span><input id="date" name="date" type="date" required></label>
+                <label class="field"><span class="field-label">À quelle heure ?</span><input id="time" name="time" type="time" required></label>
+              </div>
+            </section>
+
+            <section class="form-section">
+              <div class="section-title"><span class="section-number">02</span><div><h3>On se voit où ?</h3><p>À la maison ou dans ton restaurant préféré.</p></div></div>
+              <div class="choice-row location-choices">
+                <label class="choice-card">
+                  <input type="radio" name="location" value="residence" checked>
+                  <span class="choice-content"><span class="choice-emoji">⌂</span><span><strong>À la résidence</strong><small>Une soirée tranquille chez nous</small></span><span class="radio-mark"></span></span>
+                </label>
+                <label class="choice-card">
+                  <input type="radio" name="location" value="restaurant">
+                  <span class="choice-content"><span class="choice-emoji">♧</span><span><strong>Au restaurant</strong><small>On sort et on se fait plaisir</small></span><span class="radio-mark"></span></span>
+                </label>
+              </div>
+              <label class="field conditional-field hidden" id="venueField"><span class="field-label">Quel restaurant ? <span class="optional">(si tu as une idée)</span></span><input name="venue" type="text" maxlength="120" placeholder="Le nom ou le quartier"></label>
+            </section>
+
+            <section class="form-section">
+              <div class="section-title"><span class="section-number">03</span><div><h3>Qu’est-ce qui te ferait envie ?</h3><p>Choisis un ou plusieurs plats.</p></div></div>
+              <div class="dish-grid">
+                <label class="dish-card"><input type="checkbox" name="dishes" value="Poulet braisé"><span class="dish-emoji">🍗</span><span class="dish-name">Poulet braisé</span><span class="dish-check">✓</span></label>
+                <label class="dish-card"><input type="checkbox" name="dishes" value="Attiéké poisson"><span class="dish-emoji">🐟</span><span class="dish-name">Attiéké poisson</span><span class="dish-check">✓</span></label>
+                <label class="dish-card"><input type="checkbox" name="dishes" value="Alloco"><span class="dish-emoji">🍌</span><span class="dish-name">Alloco</span><span class="dish-check">✓</span></label>
+                <label class="dish-card"><input type="checkbox" name="dishes" value="Kédjénou"><span class="dish-emoji">🍲</span><span class="dish-name">Kédjénou</span><span class="dish-check">✓</span></label>
+                <label class="dish-card"><input type="checkbox" name="dishes" value="Pizza"><span class="dish-emoji">🍕</span><span class="dish-name">Pizza</span><span class="dish-check">✓</span></label>
+                <label class="dish-card"><input type="checkbox" name="dishes" value="Sushi"><span class="dish-emoji">🍣</span><span class="dish-name">Sushi</span><span class="dish-check">✓</span></label>
+              </div>
+              <div class="date-time-grid extra-fields">
+                <label class="field"><span class="field-label">Une autre envie ? <span class="optional">(facultatif)</span></span><input id="otherDish" type="text" maxlength="80" placeholder="Je ne vois pas ton plat préféré ?"></label>
+                <label class="field"><span class="field-label">Et pour le dessert ? <span class="optional">(facultatif)</span></span><input name="dessert" type="text" maxlength="120" placeholder="Quelque chose de sucré…"></label>
+              </div>
+            </section>
+
+            <section class="form-section birthday-section">
+              <div class="birthday-icon">✳</div>
+              <div class="section-title birthday-title"><span class="section-number">04</span><div><h3>Et pour ton anniversaire ?</h3><p>Dis-moi le genre de cadeau qui te ferait plaisir.</p></div></div>
+              <label class="field"><span class="field-label">Le cadeau qui te tente</span><select name="giftType" required><option value="">Choisis une idée…</option><option>Bijoux</option><option>Parfum ou soins</option><option>Vêtements ou accessoires</option><option>Une sortie ou un voyage</option><option>Téléphone ou technologie</option><option>Un cadeau surprise</option><option>Autre idée</option></select></label>
+              <label class="field gift-details"><span class="field-label">Un détail ou une idée précise ? <span class="optional">(facultatif)</span></span><input name="giftDetails" type="text" maxlength="300" placeholder="Une couleur, une marque, un endroit…"></label>
+            </section>
+
+            <label class="field note-field"><span class="field-label">Un petit mot pour moi ? <span class="optional">(facultatif)</span></span><textarea name="note" rows="3" maxlength="500" placeholder="Une surprise à prévoir, une envie particulière…"></textarea></label>
+            <div class="form-footer"><p><span class="heart-outline">♡</span> Ta demande m’arrivera tout de suite.</p><button class="submit-button" type="submit"><span>Envoyer mon invitation</span><span class="button-arrow">→</span></button></div>
+            <div id="formMessage" class="form-message" role="status" aria-live="polite"></div>
+          </form>
+
+          <footer class="site-footer"><span>fait avec <span class="footer-heart">♥</span> pour nous deux</span><span>les meilleurs moments commencent à deux</span></footer>
+        </section>
+
+        <section class="host-view hidden" id="hostView">
+          <div class="host-hero">
+            <div class="eyebrow"><span class="sparkle">✳</span> VOTRE PETIT CARNET À DEUX</div>
+            <h1>Les soirées<br><em>qui nous attendent.</em></h1>
+            <p class="hero-subtitle">Les demandes d’Acho, et tous les petits détails pour lui préparer une belle soirée.</p>
+          </div>
+          <div class="inbox-heading"><div><div class="eyebrow muted-eyebrow">VOTRE AGENDA</div><h2>Invitations reçues</h2></div><button class="notify-button" id="notifyButton" type="button"><span>♧</span> Activer les alertes</button></div>
+          <p class="notification-hint" id="notificationHint">Garde cette page ouverte pour être averti dès qu’Acho envoie une demande.</p>
+          <div class="reservation-list" id="reservationList"><div class="loading-state">On prépare votre carnet…</div></div>
+          <footer class="site-footer host-footer"><button class="text-button" id="backToInvite" type="button">← Retour à l’invitation</button><span>fait avec <span class="footer-heart">♥</span> pour nous deux</span></footer>
+        </section>
+      </main>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
